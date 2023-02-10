@@ -1,0 +1,101 @@
+@use '../../GlobalStyles/GlobalStyles.scss';
+
+.wrapper {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 245px;
+    color: GlobalStyles.$color-text;
+    border-left: 1px solid GlobalStyles.$color-light-text;
+    animation: modalIn 0.8s ease;
+    z-index: 1;
+}
+
+@keyframes modalIn {
+    from {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container {
+    width: 400px;
+    height: 100vh;
+    padding: 8px 0;
+    position: relative;
+    background-color: GlobalStyles.$color-primary;
+}
+
+.title {
+    margin: 8px 0;
+    padding: 12px 14px 36px 24px;
+    font-size: 3rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    input {
+        width: 90%;
+        padding: 12px 12px;
+        border-radius: 12px;
+        background-color: GlobalStyles.$color-gray;
+    }
+}
+
+.bot {
+    border-top: 1px solid GlobalStyles.$color-light-text;
+    padding-top: 12px;
+}
+.sub-title {
+    margin: 6px 24px 8px;
+    display: flex;
+    justify-content: space-between;
+    .right {
+        color: GlobalStyles.$color-blue;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+.result {
+    margin: 16px 0;
+}
+
+.item {
+    display: flex;
+    padding: 8px 24px;
+    align-items: center;
+    cursor: pointer;
+    .avt {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 12px;
+    }
+    .name {
+        .check {
+            color: GlobalStyles.$color-blue;
+            margin-left: 10px;
+            font-size: 1.5rem;
+        }
+        .fullname {
+            color: GlobalStyles.$color-light-text;
+        }
+    }
+
+    .btn {
+        position: absolute;
+        right: 20px;
+    }
+    &:hover {
+        background-color: GlobalStyles.$color-gray;
+    }
+}

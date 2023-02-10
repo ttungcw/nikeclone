@@ -1,0 +1,60 @@
+@use '../../../GlobalStyles/GlobalStyles.scss';
+.wrapper {
+    width: 470px;
+    margin-left: 645px;
+    background-color: transparent;
+}
+
+.news {
+    margin-top: 16px;
+    padding: 0 16px;
+    border: 1px solid GlobalStyles.$color-text;
+    height: 100px;
+}
+
+.post {
+    margin-top: 16px;
+    border: 1px solid GlobalStyles.$color-text;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    .info {
+        display: flex;
+        align-items: center;
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .name {
+            margin-left: 10px;
+        }
+    }
+    .menu {
+        font-size: 3rem;
+    }
+}
+
+.react {
+    display: flex;
+    margin-top: 20px;
+    .save {
+        margin-left: 80%;
+    }
+}
+
+.like {
+    margin-top: 50px;
+}
+
+.comment {
+    padding: 20px;
+    margin-top: 60px;
+    border-top: 1px solid GlobalStyles.$color-text;
+    border-bottom: 1px solid GlobalStyles.$color-text;
+}
